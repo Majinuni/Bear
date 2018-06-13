@@ -17,8 +17,8 @@ script:
 - python manage.py test
 
 deploy:
-  - provider:
-      script: bash -n /bluemix_scripts/*.sh
+  - provider: script
+    script: ./deploy.sh bash -n /bluemix_scripts/*.sh
     skip_cleanup: true
     script: ./deploy_rollup.sh
     on:
