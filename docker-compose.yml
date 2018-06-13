@@ -1,0 +1,30 @@
+version: '3'
+services:
+  web:
+    build: .
+    restart: always
+    # build: .
+    expose:
+      - "8000"
+    ports:
+      - "8000:8000"
+    links:
+      - postgresql:postgresql
+    environment:
+      - DATABASE_URL=postgis://majinuni_user:majinuni@postgresql:5432/majinuni
+    depends_on:
+      - postgresql
+
+  postgresql:
+    restart: always
+    image: mdillon/postgis:10-alpine
+    environment:
+      - POSTGRES_DB=majinuni
+      - POSTGRES_USER=majinuni_user
+      - POSTGRES_PASSWORD=majinuni
+    expose:
+      - "5432"
+    ports:
+      - "5432:5432"
+    volumes:
+      - /var/lib/postgresql/data/

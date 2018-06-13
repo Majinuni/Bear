@@ -16,9 +16,9 @@ import environ
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ROOT_DIR = environ.Path(
-    __file__
-) - 1  # (django_majinuni/settings.py - 3 = django_majinuni/)
+ROOT_DIR = (
+    environ.Path(__file__) - 1
+)  # (django_majinuni/settings.py - 3 = django_majinuni/)
 
 # Load operating system environment variables and then prepare to use them
 env = environ.Env()
@@ -40,7 +40,10 @@ if READ_DOT_ENV_FILE:
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("DJANGO_SECRET_KEY", default=')te%k(9a0apo#2%-=^fpddlcammxw6(-hm2yuwi7bqn+pay57z')
+SECRET_KEY = env(
+    "DJANGO_SECRET_KEY",
+    default=")te%k(9a0apo#2%-=^fpddlcammxw6(-hm2yuwi7bqn+pay57z",
+)
 
 ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["*"])
 
@@ -67,44 +70,40 @@ DJANGO_APPS = [
     # Admin
     "django.contrib.admin",
 ]
-THIRD_PARTY_APPS = [
-
-]
+THIRD_PARTY_APPS = []
 
 # Apps specific for this project go here.
-LOCAL_APPS = [
-
-]
+LOCAL_APPS = []
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = 'django_majinuni.urls'
+ROOT_URLCONF = "django_majinuni.urls"
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+            ]
         },
-    },
+    }
 ]
 
 TEMPLATES = [
@@ -129,15 +128,13 @@ TEMPLATES = [
 ]
 
 
-WSGI_APPLICATION = 'django_majinuni.wsgi.application'
+WSGI_APPLICATION = "django_majinuni.wsgi.application"
 
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
-    "default": {}
-}
+DATABASES = {"default": {}}
 
 # 'ENGINE': 'django.contrib.gis.db.backends.postgis'
 # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -157,16 +154,14 @@ DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
+    },
+    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
+    {
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"
     },
 ]
 
@@ -174,9 +169,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -184,8 +179,20 @@ USE_L10N = True
 
 USE_TZ = True
 
+SITE_ID = 1
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
+
+MEDIA_URL = "/media/"
+
+STATIC_ROOT = os.path.join(BASE_DIR, "CollectedStatic")
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "CollectedMedia")
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), "static"]
+
+MEDIAFILES_DIRS = [os.path.join(BASE_DIR, "media"), "media"]

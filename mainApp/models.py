@@ -3,9 +3,7 @@ from django.contrib.postgres.operations import CreateExtension
 
 # Create your models here.
 
-class Migration(migrations.Migration):
-    
-    operations = [
-        CreateExtension('postgis'),
-    ]
 
+class Migration(migrations.Migration):
+
+    operations = [CreateExtension("postgis")]

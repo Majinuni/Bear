@@ -1,0 +1,19 @@
+language: python
+services:
+- postgis
+python:
+- 3.4
+- 3.5
+- 3.6
+env:
+- DATABASE_URL=postgis://majinuni_user:majinuni@localhost:5432/majinuni
+install:
+- pip install -r requirements.txt
+before_script:
+- psql -c "CREATE DATABASE majinuni;" -U postgres
+- psql -c """
+    CREATE USER majinuni_user WITH PASSWORD 'majinuni';
+    GRANT ALL PRIVILEGES ON DATABASE majinuni TO majinuni_user;
+    """ -U postgres
+script:
+- python manage.py test
