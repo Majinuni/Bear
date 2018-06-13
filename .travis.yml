@@ -18,9 +18,8 @@ script:
 
 deploy:
   - provider: script
-    script: ./deploy.sh bash -n /bluemix_scripts/*.sh
+    script: bluemix_scripts/deploy_rollup.sh
     skip_cleanup: true
-    script: ./deploy_rollup.sh
     on:
       branch: master
       branch: devops-pipeline
