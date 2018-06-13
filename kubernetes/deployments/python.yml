@@ -11,12 +11,12 @@ spec:
     metadata:
       labels:
         app: python-app
-        version: "v0.1.0"
+        version: v$TRAVIS_BUILD_NUMBER
         lang: python
     spec:
       containers:
         - name: python-app
-          image: registry.ng.bluemix.net/test_api_registry_namespace/ibm_water_hackathon_bear:v0.1.0
+          image: registry.ng.bluemix.net/test_api_registry_namespace/ibm_water_hackathon_bear:v$TRAVIS_BUILD_NUMBER
           imagePullPolicy: Always
           resources:
             limits:
