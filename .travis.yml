@@ -1,6 +1,6 @@
 language: python
 services:
-- postgis
+- postgresql
 python:
 - 3.6
 env:
