@@ -2,14 +2,13 @@ language: python
 services:
 - postgis
 python:
-- 3.4
-- 3.5
 - 3.6
 env:
 - DATABASE_URL=postgis://majinuni_user:majinuni@localhost:5432/majinuni
 install:
 - pip install -r requirements.txt
 before_script:
+- sudo apt-get install -y gdal-bin geoip-bin
 - psql -c "CREATE DATABASE majinuni;" -U postgres
 - psql -c """
     CREATE USER majinuni_user WITH PASSWORD 'majinuni';
