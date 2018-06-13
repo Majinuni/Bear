@@ -19,6 +19,13 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
+echo "Container Registry Login"
+bx cr login
+if [ $? -ne 0 ]; then
+  echo "Failed to authenticate to Bluemix Container Registry"
+  exit 1
+fi
+
 # Init container clusters
 echo "bluemix cs init"
 bluemix cs init

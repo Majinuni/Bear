@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: python-app
-          image:
+          image: registry.ng.bluemix.net/test_api_registry_namespace/ibm_water_hackathon_bear:0.1.0
           imagePullPolicy: Always
           resources:
             limits:
