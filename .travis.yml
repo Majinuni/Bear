@@ -21,3 +21,6 @@ deploy:
       script: bash -n /bluemix_scripts/*.sh
     skip_cleanup: true
     script: ./deploy_rollup.sh
+    on:
+      branch: master
+      branch: devops-pipeline
