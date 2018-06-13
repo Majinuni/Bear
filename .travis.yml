@@ -8,11 +8,10 @@ env:
 install:
 - pip install -r requirements.txt
 before_script:
-- sudo apt-get install -y gdal-bin geoip-bin
+- sudo apt-get install -y gdal-bin geoip-bin postgresql-9.2-postgis-2.3
 - psql -c "CREATE DATABASE majinuni;" -U postgres
 - psql -c 'CREATE EXTENSION postgis;' -U postgres -d majinuni
 - psql -c 'CREATE EXTENSION postgis_topology;' -U postgres -d majinuni
-
 
 script:
 - python manage.py test
