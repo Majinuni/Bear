@@ -5,8 +5,8 @@ wget --quiet --output-document=/tmp/Bluemix_CLI_amd64.tar.gz  http://public.dhe.
 tar -xf /tmp/Bluemix_CLI_amd64.tar.gz --directory=/tmp
 
 # Create bx alias
-echo "#!/bin/sh" >/tmp/Bluemix_CLI/bin/bx
-echo "/tmp/Bluemix_CLI/bin/bluemix \"\$@\" " >>/tmp/Bluemix_CLI/bin/bx
+echo "#!/bin/sh" > /tmp/Bluemix_CLI/bin/bx
+echo "/tmp/Bluemix_CLI/bin/bluemix \"\$@\" " >> /tmp/Bluemix_CLI/bin/bx
 chmod +x /tmp/Bluemix_CLI/bin/*
 
 export PATH="/tmp/Bluemix_CLI/bin:$PATH"
@@ -23,3 +23,6 @@ if [ -n "$DEBUG" ]; then
   bx --version
   bx plugin list
 fi
+
+bluemix
+kubectl
