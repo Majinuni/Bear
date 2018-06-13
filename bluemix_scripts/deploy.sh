@@ -16,7 +16,7 @@ fi
 eval "$exp"
 
 echo "Build Docker Image for Application"
-bx cr build . --tag registry.ng.bluemix.net/test_api_registry_namespace/ibm_water_hackathon_bear:v$TRAVIS_BUILD_NUMBER
+bx cr build . --tag registry.ng.bluemix.net/test_api_registry_namespace/ibm_water_hackathon_bear:v30 # $TRAVIS_BUILD_NUMBER
 
 echo -e "Creating pods"
 envsubst < kubernetes/deployments/python.yml | kubectl apply -f -

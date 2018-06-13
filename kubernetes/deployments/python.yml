@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - name: python-app
-          image: registry.ng.bluemix.net/test_api_registry_namespace/ibm_water_hackathon_bear:v0.1.0  # v$TRAVIS_BUILD_NUMBER
+          image: registry.ng.bluemix.net/test_api_registry_namespace/ibm_water_hackathon_bear:v30  # v$TRAVIS_BUILD_NUMBER
           imagePullPolicy: Always
           resources:
             limits:
