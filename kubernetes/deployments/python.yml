@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: python-app-deployment
+  labels:
+    app: python-app
+spec:
+  replicas: 2
+  minReadySeconds: 10
+  template:
+    metadata:
+      labels:
+        app: python-app
+        version: "v0.1.0"
+        lang: python
+    spec:
+      containers:
+        - name: python-app
+          image:
+          imagePullPolicy: Always
+          resources:
+            limits:
+              # cpu: 0.1
+              memory: 500Mi
+            requests:
+              memory: 500Mi
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DATABASE_URL
+              value: postgis://majinuni_user:majinuni@postgis-service:5432/majinuni
