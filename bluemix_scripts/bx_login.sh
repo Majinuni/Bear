@@ -12,16 +12,16 @@ if [ -z "$BLUEMIX_API_KEY" ]; then
 fi
 echo "Deploy pods"
 
-echo "bx login -a $CF_TARGET_URL"
-bx login -a "$CF_TARGET_URL" --apikey "$BLUEMIX_API_KEY" 
+echo "bluemix login -a $CF_TARGET_URL"
+bluemix login -a "$CF_TARGET_URL" --apikey "$BLUEMIX_API_KEY"
 if [ $? -ne 0 ]; then
   echo "Failed to authenticate to Bluemix"
   exit 1
 fi
 
 # Init container clusters
-echo "bx cs init"
-bx cs init
+echo "bluemix cs init"
+bluemix cs init
 if [ $? -ne 0 ]; then
   echo "Failed to initialize to Bluemix Container Service"
   exit 1
