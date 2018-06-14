@@ -12,7 +12,7 @@ spec:
         app: postgis-app
     spec:
       containers:
-      - image: redis:latest
+      - image: mdillon/postgis:10-alpine
         imagePullPolicy: Always
         name: postgis-container
         ports:
