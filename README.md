@@ -1,7 +1,8 @@
 # Bear
 W4S (Water For Sustainability)
 
-This project is a web based system that facillitates the 
+## Background
+Access to water is a pertinent issue in developing countries. Our project offers to provide a platform to aid in decision making within arid areas by providing analyses from data collected within a specified location.
 
 ## Getting Started/ Contributing
 
@@ -12,18 +13,45 @@ Make sure you remember to push your code to the main repository each time you ad
 Feel free to point out or correct any errors that may have been made.
 
 
-## Deployment
-Hosted using ___.
 
-The live website is accessible from: (https://)
+## Deplpoyment: Running Using Docker
+
+### Requirements
+
+- Docker
+- Docker-compose
+- Git
+
+Clone the repository into a directory of your own choice.
+
+`git clone https://github.com/SamwelOpiyo/Bear.git`
+
+
+`cd Bear`
+
+### Starting the server
+
+Start Docker
+
+    $ systemctl start docker
+
+Build docker container
+
+    $ docker-compose build
+
+Start docker container
+
+    $ docker-compose up or $ docker-compose up -d for daemon
+
+Visit http://127.0.0.1:8000 or http://0.0.0.0:8000
 
 ## Built With
 
-* [Bootstrap](https://getbootstrap.com) - The web framework used to add responsiveness
+* [Bootstrap](https://getbootstrap.com) 
 * [HTML]
 * [CSS]
-* [JavaScript]
-* [Python]
+* [JavaScript] Leaflet JS, for mapping.
+* [Python] Django
 
 
 ## Authors
@@ -36,11 +64,14 @@ The live website is accessible from: (https://)
 * **Evalyne** - *Initial work* - [](https://github.com/)
 * **Paul** - *Initial work* - [](https://github.com/)
 
+## Acknowledgments
+
+* Mentors: Violette Ogega, Isaac Waweru.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Mentors: Violette Ogega, Isaac
+
+
