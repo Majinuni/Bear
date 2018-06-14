@@ -3,6 +3,7 @@
 .idea/
 
 CollectedStatic/
+staticfiles/
 CollectedMedia/
 
 tests/
