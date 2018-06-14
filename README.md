@@ -56,17 +56,19 @@ Visit http://127.0.0.1:8000 or http://0.0.0.0:8000
 
 ## Authors
 
-* **Gacho** - *Initial work* - [sammyloto](https://github.com/sammyloto)
-* **Nzaro** - *Initial work* - [](https://github.com/)
-* **Opiyo** - *Initial work* - [](https://github.com/)
-* **Stanley** - *Initial work* - [](https://github.com/)
-* **Kioko** - *Initial work* - [](https://github.com/)
-* **Evalyne** - *Initial work* - [](https://github.com/)
-* **Paul** - *Initial work* - [](https://github.com/)
+* **Sammy Gacho** - *Initial work* - [](https://github.com/)
+* **Samuel Nzaro** - *Initial work* - [](https://github.com/)
+* **Samuel Opiyo** - *Initial work* - [](https://github.com/)
+* **Stanley Ngunyi** - *Initial work* - [](https://github.com/)
+* **Patrick Kioko** - *Initial work* - [](https://github.com/)
+* **Evalyne Levanto** - *Initial work* - [](https://github.com/)
+* **Paul Wekesa** - *Initial work* - [](https://github.com/)
 
 ## Acknowledgments
 
-* Mentors: Violette Ogega, Isaac Waweru.
+#### Mentors:
+* **Valette Ogega**
+* **Isaac Waweru**
 
 ## License
 
