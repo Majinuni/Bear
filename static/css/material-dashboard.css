@@ -8981,21 +8981,21 @@ label.control-label {
 .form-group .form-control::-moz-placeholder {
     font-size: 14px;
     line-height: 1.428571429;
-    color: #AAAAAA;
+    color: #0a0404;
     font-weight: 400;
 }
 
 .form-group .form-control:-ms-input-placeholder {
     font-size: 14px;
     line-height: 1.428571429;
-    color: #AAAAAA;
+    color: #0a0404;
     font-weight: 400;
 }
 
 .form-group .form-control::-webkit-input-placeholder {
     font-size: 14px;
     line-height: 1.428571429;
-    color: #AAAAAA;
+    color: #0a0404;
     font-weight: 400;
 }
 
@@ -9006,14 +9006,14 @@ label.control-label {
 .form-group .label-on-right {
     font-size: 14px;
     line-height: 1.428571429;
-    color: #AAAAAA;
+    color: #0a0404;;
     font-weight: 400;
 }
 
 .form-group label.control-label {
     font-size: 11px;
     line-height: 1.0714285718;
-    color: #AAAAAA;
+    color: #0a0404;
     font-weight: 400;
     margin: 16px 0 0 0;
 }

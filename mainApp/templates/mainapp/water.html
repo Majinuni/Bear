@@ -4,10 +4,80 @@
     
 <div class="content">
                 <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <a href="#" class="btn btn-primary">Add Water Reservoir</a>
+                                <div class="row">
+
+                    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#areaModal">
+  Add Location
+</button>
+
+<!-- Modal -->
+
+                    <!-- start modal -->
+    <div class="modal fade" id="areaModal" tabindex="-1" role="dialog" aria-labelledby="areaModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="areaModalLabel">Add Water Reservoir</h5>
+ 
+      </div>
+      <div class="modal-body">
+        
+                    <div class="row">
+                        <div class="col-md-9 col-ms-offset-3" style="padding-left: 80px;">
+                            <div class="card">
+                                <form id="RegisterValidation" action="" method="">
+
+                                    <div class="card-content">
+                                        <h4 class="card-title">Register Water Reservoir</h4>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">
+                                                Reservoir Name:
+                                                <small>*</small>
+                                            </label>
+                                            <input class="form-control" name="areaname" type="text" required="true" />
+                                        </div>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">
+                                                Capacity:
+                                                <small>*</small>
+                                            </label>
+                                            <input class="form-control" name="capacity" type="text" required="true" />
+                                        </div>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">
+                                                Rainfall Dependacy
+                                                <small>*</small>
+                                            </label>
+                                            <input class="form-control" name="rain" type="text" required="true" />
+                                        </div>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">
+                                                Location
+                                                <small>*</small>
+                                            </label>
+                                            <input class="form-control" name="location" type="text" required="true"  />
+                                        </div>
+                                        <div class="category form-category">
+                                            <small>*</small> Required fields</div>
+                                        <div class="form-footer text-right">
+
+                                            <button type="submit" class="btn btn-rose btn-fill">Save</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+ 
                     </div>
+                
+      </div>
+
+    </div>
+  </div>
+</div>
+                    <!-- end -->
                     
                 </div>
                     <div class="row">

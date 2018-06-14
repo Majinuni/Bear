@@ -1,0 +1,39 @@
+{% extends 'mainapp/base.html' %} {% block content %}
+
+<div class="content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header card-header-text" data-background-color="rose">
+						<h4 class="card-title">Water Supply, Capacity per month</h4>
+					</div>
+					<div class="card-content">
+						<canvas id="myChart"></canvas>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card">
+						<div class="card-header card-header-text" data-background-color="rose">
+							<h4 class="card-title">Monthly Water Supply and Demand</h4>
+						</div>
+						<div class="card-content">
+							<canvas id="supplyDemandBar" height="300px"></canvas>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card">
+						<div class="card-header card-header-text" data-background-color="rose">
+							<h4 class="card-title">Water Supply By Source</h4>
+						</div>
+						<div class="card-content">
+							<canvas id="supplyBySource" height="300px"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% endblock %}

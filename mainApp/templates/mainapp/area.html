@@ -5,9 +5,79 @@
 <div class="content">
                 <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12">
-                        <a href="#" class="btn btn-primary">Add Location</a>
+
+                    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#areaModal">
+  Add Location
+</button>
+
+<!-- Modal -->
+
+                    <!-- start modal -->
+    <div class="modal fade" id="areaModal" tabindex="-1" role="dialog" aria-labelledby="areaModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="areaModalLabel">Add Area/Location</h5>
+ 
+      </div>
+      <div class="modal-body">
+        
+                    <div class="row">
+                        <div class="col-md-9 col-ms-offset-3" style="padding-left: 80px;">
+                            <div class="card">
+                                <form id="RegisterValidation" action="" method="">
+
+                                    <div class="card-content">
+                                        <h4 class="card-title">Register Area</h4>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">
+                                                Name:
+                                                <small>*</small>
+                                            </label>
+                                            <input class="form-control" name="areaname" type="text" required="true" />
+                                        </div>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">
+                                                County:
+                                                <small>*</small>
+                                            </label>
+                                            <input class="form-control" name="capacity" type="text" required="true" />
+                                        </div>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">
+                                                Constituency:
+                                                <small>*</small>
+                                            </label>
+                                            <input class="form-control" name="rain" type="text" required="true" />
+                                        </div>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">
+                                                Ward:
+                                                <small>*</small>
+                                            </label>
+                                            <input class="form-control" name="location" type="text" required="true"  />
+                                        </div>
+                                        <div class="category form-category">
+                                            <small>*</small> Required fields</div>
+                                        <div class="form-footer text-right">
+
+                                            <button type="submit" class="btn btn-rose btn-fill">Save</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+ 
                     </div>
+                
+      </div>
+
+    </div>
+  </div>
+</div>
+                    <!-- end -->
                     
                 </div>
                     <div class="row">
@@ -15,7 +85,7 @@
                             <div class="card">
 
                                 <div class="card-content">
-                                    <h4 class="card-title">Geographic Location</h4>
+                                    <h4 class="card-title">Geographical Location</h4>
                                     <div class="toolbar">
                                         <!--        Here you can write extra buttons/actions for the toolbar              -->
                                     </div>
@@ -26,7 +96,7 @@
                                                     <th><b/>Name</th>
                                                     <th><b/>County</th>
                                                     <th><b/>Constituency</th>
-                                                    <th><b/>Town</th>
+                                            
                                                     <th><b/>Ward</th>
                                                     <th class="disabled-sorting text-right"><b/>Actions</th>
                                                 </tr>
@@ -36,7 +106,7 @@
                                                     <th>Name</th>
                                                     <th>County</th>
                                                     <th>Constituency</th>
-                                                    <th>Town</th>
+                                                    
                                                     <th>Ward</th>
                                                     <th class="text-right">Actions</th>
                                                 </tr>
@@ -46,7 +116,7 @@
                                                     <td>Tiger Nixon</td>
                                                     <td>System Architect</td>
                                                     <td>Edinburgh</td>
-                                                    <td>61</td>
+                                                    
                                                     <td>2011/04/25</td>
                                                     <td class="text-right">
                                                         
