@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import JsonResponse
+import json
 
 
 # Create your views here.
@@ -21,8 +23,14 @@ def watermap(request):
 def dashboard(request):
     	return render(request, 'mainapp/reports.html', {})
 
+def reportsTwo(request):
+    	return render(request,'mainapp/reportsTwo.html', {})
+
 def analysis(request):
     	return render(request, 'mainapp/analysis.html', {})
 
 def predictor(request):
     	return render(request, 'mainapp/predictor.html', {})
+
+def display(request):
+    	return JsonResponse(data)

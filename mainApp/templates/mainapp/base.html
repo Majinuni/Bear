@@ -124,12 +124,7 @@
                                         <span class="sidebar-normal"> Icons </span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="./components/typography.html">
-                                        <span class="sidebar-mini"> T </span>
-                                        <span class="sidebar-normal"> Typography </span>
-                                    </a>
-                                </li>
+                                
                             </ul>
                         </div>
                     </li>
@@ -301,21 +296,34 @@
 </script>
 
 <script>
-    var cupcakeTiles = L.tileLayer('http://a.tiles.mapbox.com/v3/lyzidiamond.map-ietb6srb/{z}/{x}/{y}.png', {
-    maxZoom: 18
-    });
-    
-    $.getJSON("http://lyzidiamond.com/cupcakes/cupcakes.json", function(data) {
-    var geojson = L.geoJson(data, {
-      onEachFeature: function (feature, layer) {
-        layer.bindPopup(feature.properties.name+'<br>'+feature.properties.address+'<br>'+feature.properties.website);
-      }
-    });
-    var map = L.map('reservoir-map').fitBounds(geojson.getBounds());
-    cupcakeTiles.addTo(map);
-    geojson.addTo(map);
-    });
-    
+
+	var planes = [
+		["<b>Odder Three</b><br> Borehole",3.47985, 39.10221666666666],
+		["<b>Ulauli</b> Borehole",1.6206, 37.59424999999999],
+		["<b>Laisamis</b>Borehole",1.595733333333333,37.82730000000001],
+		["<b>Odder Two</b>Borehole",3.48115,39.10275000000001],
+		["<b>Furmarsah</b>Borehole",0.656216666666667,38.05621666666667],
+		["<b>LogoLogo</b>Borehole",1.985466666666667,37.91471666666666],
+		["<b>Rawana</b>Borehole",3.334816666666667,38.46663333333333],
+		["<b>Bori</b>Borehole",3.516583333333333,38.98201666666665],
+		["<b>Kinisa</b>Borehole",3.444633333333333,39.12313333333333]
+		];
+
+        var map = L.map('map').setView([2.32839, 37.98986], 13);
+        mapLink = 
+            '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+        L.tileLayer(
+            'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; ' + mapLink + ' Contributors',
+            maxZoom: 18,
+            }).addTo(map);
+
+		for (var i = 0; i < planes.length; i++) {
+			marker = new L.marker([planes[i][1],planes[i][2]])
+				.bindPopup(planes[i][0])
+				.addTo(map);
+		}
+               
     </script>
 <script>
     $.getJSON('/static/JsonData/reports.json', function(result) {
@@ -396,7 +404,33 @@
             {
               label: "Supply",
               backgroundColor: "#3e95cd",
-              data: [133,221,783,2478]
+              data: [133,221,783,247]
+            }, {
+              label: "Demand",
+              backgroundColor: "#8e5ea2",
+              data: [408,547,675,734]
+            }
+          ]
+        },
+        options: {
+          title: {
+            display: true,
+            text: 'Supply vs Demand (m3)'
+          }
+        }
+    });
+</script>
+<!-- Supply Demand Graph Projection -->
+<script>
+    new Chart(document.getElementById("supplyDemandProjection"), {
+        type: 'bar',
+        data: {
+          labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+          datasets: [
+            {
+              label: "Supply",
+              backgroundColor: "#3e95cd",
+              data: [133,221,783,247]
             }, {
               label: "Demand",
               backgroundColor: "#8e5ea2",

@@ -23,8 +23,11 @@ envsubst < kubernetes/deployments/python.yml | kubectl apply -f -
 kubectl apply -f kubernetes/deployments/postgis.yml
 
 echo -e "Creating Load Balancer"
-kubectl apply -f kubernetes/services/python.yml
 kubectl apply -f kubernetes/services/postgis.yml
+
+kubectl delete services python-service-c
+
+kubectl expose deployment python-app-deployment --type LoadBalancer --name python-service-c --port 80 --protocol TCP --target-port 8000
 
 kubectl get pods
 

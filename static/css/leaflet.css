@@ -343,24 +343,12 @@
 	border-radius: 5px;
 	}
 .leaflet-control-layers-toggle {
-<<<<<<< HEAD
-	background-image: url(../../assets/images/layers.png);
-||||||| merged common ancestors
-	background-image: url(images/layers.png);
-=======
-	background-image: url('../images/marker-icon-2x.png');
->>>>>>> c24a4bb0ed7a05469d3f099bb0a390bab07af9e1
+	background-image: url('/static/images/layers.png');
 	width: 36px;
 	height: 36px;
 	}
 .leaflet-retina .leaflet-control-layers-toggle {
-<<<<<<< HEAD
-	background-image: url(../../assets/images/layers-2x.png);
-||||||| merged common ancestors
-	background-image: url(images/layers-2x.png);
-=======
-	background-image: url('../images/layers-2x.png');
->>>>>>> c24a4bb0ed7a05469d3f099bb0a390bab07af9e1
+	background-image: url('/static/images/layers-2x.png');
 	background-size: 26px 26px;
 	}
 .leaflet-touch .leaflet-control-layers-toggle {
@@ -401,13 +389,7 @@
 
 /* Default icon URLs */
 .leaflet-default-icon-path {
-<<<<<<< HEAD
-	background-image: url('../images/marker-icon.png');
-||||||| merged common ancestors
-	background-image: url(images/marker-icon.png);
-=======
-	background-image: url('images/marker-icon-2x.png');
->>>>>>> c24a4bb0ed7a05469d3f099bb0a390bab07af9e1
+	background-image: url('/static/images/marker-icon.png');
 	}
 
 

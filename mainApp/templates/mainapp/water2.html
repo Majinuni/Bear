@@ -1,0 +1,145 @@
+{% extends 'mainapp/base.html' %}
+{% block content %}
+
+    
+<div class="content">
+                <div class="container-fluid">
+                                <div class="row">
+
+                    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#areaModal">
+  Add Water Reservoir
+</button>
+
+<!-- Modal -->
+
+                    <!-- start modal -->
+    <div class="modal fade" id="areaModal" tabindex="-1" role="dialog" aria-labelledby="areaModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="areaModalLabel">Add Water Reservoir</h5>
+ 
+      </div>
+      <div class="modal-body">
+        
+                    <div class="row">
+                        <div class="col-md-9 col-ms-offset-3" style="padding-left: 80px;">
+                            <div class="card">
+                                <form id="RegisterValidation" action="" method="">
+
+                                    <div class="card-content">
+                                        <h4 class="card-title">Register Water Reservoir</h4>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">
+                                                Reservoir Name:
+                                                <small>*</small>
+                                            </label>
+                                            <input class="form-control" name="areaname" type="text" required="true" />
+                                        </div>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">
+                                                County:
+                                                <small>*</small>
+                                            </label>
+                                            <input class="form-control" name="capacity" type="text" required="true" />
+                                        </div>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">
+                                                Constituency
+                                                <small>*</small>
+                                            </label>
+                                            <input class="form-control" name="rain" type="text" required="true" />
+                                        </div>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">
+                                                Ward
+                                                <small>*</small>
+                                            </label>
+                                            <input class="form-control" name="location" type="text" required="true"  />
+                                        </div>
+                                        <div class="category form-category">
+                                            <small>*</small> Required fields</div>
+                                        <div class="form-footer text-right">
+
+                                            <button type="submit" class="btn btn-rose btn-fill">Save</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+ 
+                    </div>
+                
+      </div>
+
+    </div>
+  </div>
+</div>
+                    <!-- end -->
+                    
+                </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+
+                                <div class="card-content">
+                                    <h4 class="card-title">Geographic Location</h4>
+                                    <div class="toolbar">
+                                        <!--        Here you can write extra buttons/actions for the toolbar              -->
+                                    </div>
+                                    <div class="material-datatables">
+                                        <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th><b/>Name-Reservoir</th>
+                                                    <th><b/>county</th>
+                                                    <th><b/>constituency</th>
+                                                    <th><b/>Ward</th>
+                                                    <th><b>Population served</b></th>
+                                                
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Name-Reservoir</th>
+                                                    <th>county</th>
+                                                    <th>constituency</th>
+                                                    <th>Ward</th>
+                                                    
+                                                    
+                                                </tr>
+                                            </tfoot>
+
+
+                                            <tbody>
+                                            {% for value in data1.values %}
+                                                <tr>
+                                                    <td>{{ value.name }}</td>
+                                                    <td>{{ value.county }}</td>
+                                                    <td>{{ value.constituency }}</td>
+                                                    <td>{{ value.ward }}</td>
+                                                    <td>{{ value.people }}</td>
+                                                </tr>
+
+
+                                            {% endfor %}
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- end content-->
+                            </div>
+                            <!--  end card  -->
+                        </div>
+                        <!-- end col-md-12 -->
+                    </div>
+                    <!-- end row -->
+                </div>
+                </div>
+
+        
+    {% endblock %}
