@@ -17,9 +17,9 @@ before_script:
 script:
 - python manage.py test
 
-deploy:
-  - provider: script
-    script: bluemix_scripts/deploy_rollup.sh
-    skip_cleanup: true
-    on:
-      branch: master
+# deploy:
+  # - provider: script
+    # script: bluemix_scripts/deploy_rollup.sh
+    # skip_cleanup: true
+    # on:
+      # branch: master
